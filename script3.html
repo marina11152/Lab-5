@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Script3</title>
+</head>
+<body>
+<script>
+    var b = [];
+    var a = prompt("enter :");
+    a = parseInt(a)
+    var k=a;
+    if(Number.isInteger(a)==false)
+    {
+        alert("Не число")
+    }
+    else
+    {
+    for (i = 2; i <= a; i++) {
+        if (a % i == 0) {
+            a = a / i;
+            b.push(i);
+            // alert(i);
+            i--;
+        }
+    }
+    if (b[0] == k) alert('Це просте число');
+    else
+        alert(b);
+    }
+</script>
+</body>
+</html>

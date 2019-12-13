@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Script2</title>
+</head>
+<body>
+<script>
+    var a1, a2, b1, b2, c1, c2, d1, d2;
+    var A, B, C, D;
+    var test, test1, test2;
+    A = prompt("Введіть координати (x,y) для точки A.\nКоординати потрібно вводити через пробіл!");
+    test = A.split(' ');
+    test1 = parseFloat(test[0]);
+    test2 = parseFloat(test[1]);
+    if (A.length >= 3 && test1 >= 0 && test2 >= 0)
+        B = prompt("Введіть координати (x,y) для точки B.\nКоординати потрібно вводити через пробіл!");
+    else alert("Неправильно задані координати для точки А!");
+    test = B.split(' ');
+    test1 = parseFloat(test[0]);
+    test2 = parseFloat(test[1]);
+    if (B.length >= 3 && test1 >= 0 && test2 >= 0)
+        C = prompt("Введіть координати (x,y) для точки C.\nКоординати потрібно вводити через пробіл!");
+    else alert("Неправильно задані координати для точки B!");
+    test = C.split(' ');
+    test1 = parseFloat(test[0]);
+    test2 = parseFloat(test[1]);
+    if (C.length >= 3 && test1 >= 0 && test2 >= 0)
+        D = prompt("Введіть координати (x,y) для точки D.\nКоординати потрібно вводити через пробіл!");
+    else alert("Неправильно задані координати для точки C!");
+    test = D.split(' ');
+    test1 = parseFloat(test[0]);
+    test2 = parseFloat(test[1]);
+    if (D.length >= 3 && test1 >= 0 && test2 >= 0) {
+        A=A.split(' ');
+        B=B.split(' ');
+        C=C.split(' ');
+        D=D.split(' ');
+        a1 = parseFloat(A[0]);
+        a2 = parseFloat(A[1]);
+        b1 = parseFloat(B[0]);
+        b2 = parseFloat(B[1]);
+        c1 = parseFloat(C[0]);
+        c2 = parseFloat(C[1]);
+        d1 = parseFloat(D[0]);
+        d2 = parseFloat(D[1]);
+        var ab = Math.sqrt(Math.pow(b1 - a1, 2) + Math.pow(b2 - a2, 2));
+        var bc = Math.sqrt(Math.pow(c1 - b1, 2) + Math.pow(c2 - b2, 2));
+        var cd = Math.sqrt(Math.pow(d1 - c1, 2) + Math.pow(d2 - c2, 2));
+        var ad = Math.sqrt(Math.pow(d1 - a1, 2) + Math.pow(d2 - a2, 2));
+        if (ab > bc && ab > cd && ab > ad) {
+            alert(Math.floor(ab));
+        } else {
+            if (bc > ab && bc > cd && bc > ad) {
+                alert(Math.floor(bc));
+            } else {
+                if (cd > ab && cd > bc && cd > ad) {
+                    alert(Math.floor(cd));
+                } else {
+                    alert(Math.floor(ad));
+                }
+            }
+        }
+    } else alert("Неправильно задані координати для точки D!");
+</script>
+
+</body>
+</html>
